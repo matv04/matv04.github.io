@@ -1,0 +1,161 @@
+@import url ('https://fonts.googleapis.com/css?family=Hind+Madurai:400,500,700');
+
+ .container {
+	height: 100%;
+    width:90%;
+    margin-left:5%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 200px auto auto auto auto 40px auto 40px auto 50px;
+    grid-template-areas: 
+        ". h h h h h h h h h h h"
+        ". . . . . . . . . . . ."
+        "m m . text1 text1 text1 text1 text1 text1 text1 . ."
+        "m m . . . . . . . . . ."
+        "m m pic1 pic1 pic1 pic1 . . text2 text2 text2 text2"
+        "m m . . . . . . . . . ."
+        "m m text3 text3 text3 . pic2 pic2 pic2 pic2 . ."
+        "m m . . . . . . . . . ."
+        "m m . b b . text4 text4 text4 text4 text4 ."
+        ". f f f f f f f f f f f";
+        
+}       
+
+.header {
+    grid-area: h;
+    
+    }
+.header div.horizontal {
+   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px;
+    border: 1px solid #AFAFAF;
+    box-shadow: 2px 2px 6px 0px #AFAFAF;
+    
+}
+
+.menu {
+    grid-area: m;
+    background-color: #DBDBDB;
+}
+.nav-item {
+  color: black;
+  text-decoration: none;
+  font-size: 28px;
+  display:block;
+  margin: 10px ;
+  padding-top:30px;
+  justify-content: start;
+  transition:0,2s ease-out;
+  }
+ a:hover{
+    text-decoration: underline;
+}
+.text1 {
+    grid-area: text1;
+    font-family:'Hind Madurai', sans-serif;
+    display:flex;
+    font-size: 20px;
+}
+.pic1 {
+    grid-area: pic1;
+    border: 1px solid #AFAFAF;
+    box-shadow: 2px 2px 6px 0px #AFAFAF;
+    
+   
+}
+.text2 {
+    grid-area: text2;
+    font-family:'Hind Madurai', sans-serif;
+    display:block;
+    border: 1px solid black;
+    border-radius: 45px;
+    padding:20px;
+    font-size: 20px;
+}
+.text3 {
+    grid-area: text3;
+    font-family:'Hind Madurai', sans-serif;
+    display:block;
+    border: 1px solid black;
+    border-radius: 45px;
+    padding:20px;
+    font-size: 20px;
+    max-height:300px;
+}
+.pic2 {
+    grid-area: pic2;
+    border: 1px solid #AFAFAF;
+    box-shadow: 2px 2px 6px 0px #AFAFAF;
+   
+}
+.button {
+    grid-area: b;
+    font-weight:700;
+    text-decoration:none;
+    color: black;
+    text-transform: uppercase;
+    display:inline-block;
+    border: 2px solid black;
+    border-radius:50px;
+    max-height:30px;
+    padding-top:15px;
+    padding-bottom:8px;
+    padding-left:30px;
+    padding-right:23px;
+    transition:0,2s ease-out;
+    
+}
+.button: hover {
+    color:white;
+    background-color: black;
+}
+.text4 {
+    grid-area: text4;
+    font-family:'Hind Madurai', sans-serif;
+    display:flex;
+    font-size: 20px;
+}
+.footer {
+    grid-area: f;
+    background-color: #DBDBDB;
+}
+
+.container > div {
+  display: flex;
+ 
+}
+.header > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html, body {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px;
+  font-family:'Hind Madurai', sans-serif;
+}
+
+@media print {
+  body{
+    background-image: none;
+    font-size: 12px;
+  }
+  .nav {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  
+  .nav-item {
+  display: none;
+  }
+}
